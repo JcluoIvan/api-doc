@@ -1,11 +1,12 @@
 import { VariableType } from "./VariableType";
+import { SendType } from "./CommomTypes";
 
 
 type DocData = {
     api: string,
     title: string,
     comment ?: string,
-    data : TypeData,
+    data ?: TypeData,
     response: TypeData,
 }
 

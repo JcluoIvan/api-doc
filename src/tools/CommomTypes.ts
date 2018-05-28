@@ -1,5 +1,5 @@
 import { VariableType, type } from "./VariableType";
-import { TypeDoc } from "./TypeDoc";
+import { TypeDoc, TypeData } from "./TypeDoc";
 
 
 export namespace SendType {
@@ -15,7 +15,7 @@ export namespace SendType {
 
 export namespace ResponseType {
 
-    export function response (data: {[key: string]: VariableType | object}) {
+    export function response (data: TypeData) {
         return {
             success: type().boolean().comment('執行結果'),
             message: type().string().comment('回傳訊息'),
@@ -24,8 +24,8 @@ export namespace ResponseType {
     }
 
     export function page (
-        content: VariableType | object,
-        join: {[key: string]: VariableType} = {},
+        content: TypeData,
+        join: TypeData = {},
     ) {
         return response({
             data: {

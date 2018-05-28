@@ -9,11 +9,11 @@ import { writeFileSync } from "fs";
 });
 const markDown: string[] = [];
 TypeDoc.all().forEach(doc => {
-    markDown.push(`## ${doc.api} (${doc.title}`);
+    markDown.push(`## 2.${doc.api} (${doc.title})`);
     markDown.push(`### ${doc.comment || doc.title}`);
     markDown.push('#### Request Body')
     markDown.push('```');
-    markDown.push(treeJson(doc.data));
+    markDown.push(doc.data ? treeJson(doc.data) : '// 無傳入值');
     markDown.push('```');
     markDown.push('#### Response')
     markDown.push('```');

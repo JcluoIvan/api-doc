@@ -17,3 +17,15 @@ TypeDoc_1.TypeDoc.addDoc({
         remark: VariableType_1.type().string(200).comment('備註'),
     }),
 });
+TypeDoc_1.TypeDoc.addDoc({
+    api: api,
+    title: '查詢標籤資料 - 所有資料',
+    response: CommomTypes_1.ResponseType.response({
+        data: {
+            id: VariableType_1.type().number().comment('id'),
+            title: VariableType_1.type().string(20).comment('標籤名稱'),
+            color: VariableType_1.type().string(7).comment('顏色'),
+            remark: VariableType_1.type().string(200).comment('備註'),
+        }
+    }),
+});

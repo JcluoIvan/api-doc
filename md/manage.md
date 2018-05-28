@@ -1,4 +1,4 @@
-## /api/flags/page (查詢標籤資料 - 分頁
+## 2./api/flags/page (查詢標籤資料 - 分頁)
 ### 查詢標籤資料 - 分頁
 #### Request Body
 ```
@@ -31,5 +31,24 @@
         totalPages: number,	// 總頁數
     },
     join: {},
+},
+```
+## 2./api/flags (查詢標籤資料 - 所有資料)
+### 查詢標籤資料 - 所有資料
+#### Request Body
+```
+// 無傳入值
+```
+#### Response
+```
+{
+    success: boolean,	// 執行結果
+    message: string,	// 回傳訊息
+    data: {
+        id: number,	// id
+        title: string(20),	// 標籤名稱
+        color: string(7),	// 顏色
+        remark: string(200),	// 備註
+    },
 },
 ```

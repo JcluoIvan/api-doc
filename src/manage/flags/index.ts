@@ -17,3 +17,16 @@ TypeDoc.addDoc({
         remark: type().string(200).comment('備註'),
     }),
 });
+
+TypeDoc.addDoc({
+    api: api,
+    title: '查詢標籤資料 - 所有資料',
+    response: ResponseType.response({
+        data: {
+            id: type().number().comment('id'),
+            title: type().string(20).comment('標籤名稱'),
+            color: type().string(7).comment('顏色'),
+            remark: type().string(200).comment('備註'),
+        }
+    }),
+});
