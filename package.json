@@ -1,0 +1,19 @@
+{
+    "name": "c01-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "supervisor -w dist dist/index",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^10.1.3",
+        "gulp": "3.9.1",
+        "gulp-typescript": "4.0.2",
+        "supervisor": "0.12.0",
+        "typescript": "2.8.3"
+    }
+}
